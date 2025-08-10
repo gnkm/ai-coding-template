@@ -1,0 +1,7 @@
+---
+description: 基本ルール
+globs: *
+alwaysApply: true
+---
+
+`ai-rules` を参照してください。
