@@ -1,0 +1,140 @@
+name: 📋 タスク追加
+description: 新しいタスクを追加する
+title: "[Task]: "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 新しいタスクを登録
+        開発中のシステムに追加すべきタスクを記録します。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 📋 概要
+      description: このタスクで何を実現したいか、簡潔に記述してください
+      placeholder: |
+        例: ユーザー認証機能を実装する
+        例: データベースのマイグレーションスクリプトを作成する
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 🎯 目的・背景
+      description: なぜこの機能/修正が必要なのか説明してください
+      placeholder: |
+        このタスクが必要な理由や、解決したい問題について記述してください
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🚦 優先度
+      description: タスクの優先度を選択してください
+      options:
+        - "priority: highest"
+        - "priority: high"
+        - "priority: medium"
+        - "priority: low"
+      default: 2
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: category
+    attributes:
+      label: 📂 カテゴリ
+      description: タスクの種類を選択してください（複数選択可）
+      options:
+        - label: "type: feature - ✨ 新機能"
+        - label: "type: bug - 🐛 バグ修正"
+        - label: "type: refactor - ♻️ リファクタリング"
+        - label: "type: docs - 📚 ドキュメント"
+        - label: "type: test - 🧪 テスト"
+        - label: "type: chore - 🔧 その他の作業"
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: ⏱️ 見積もり工数
+      description: おおよその作業時間を選択してください
+      options:
+        - "size: XS (1時間以内)"
+        - "size: S (1〜4時間)"
+        - "size: M (4〜8時間)"
+        - "size: L (1日以上)"
+      default: 1
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: 📐 実装内容
+      description: 具体的に何をするか、箇条書きで記述してください
+      placeholder: |
+        - [ ] **設計**: 〇〇の仕様を決定する
+        - [ ] **実装**: △△の機能を追加する
+        - [ ] **テスト**: □□に関するテストケースを作成・実行する
+        - [ ] **ドキュメント**: README.md と関連ドキュメントを更新する
+      render: markdown
+    validations:
+      required: false
+
+  - type: textarea
+    id: completion-criteria
+    attributes:
+      label: ✅ 完了条件 (Definition of Done)
+      description: どうなったらこのタスクが完了とみなせるか
+      placeholder: |
+        - [ ] 全てのテストがパスし、カバレッジが維持されている
+        - [ ] 関連するドキュメントが全て更新されている
+        - [ ] コードレビューで2名以上からApproveされている
+    validations:
+      required: true
+
+  - type: input
+    id: related-issues
+    attributes:
+      label: 🔗 関連Issue
+      description: 関連するIssue番号があれば記入（例：#123, #456）
+      placeholder: "#"
+    validations:
+      required: false
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: 💭 技術的検討事項
+      description: 実装上の懸念点、検討が必要な技術的な選択など
+      placeholder: |
+        - 使用する技術スタック
+        - パフォーマンスへの影響
+        - セキュリティ上の考慮事項
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 📝 メモ・参考リンク
+      description: その他の情報、参考資料へのリンクなど
+      placeholder: |
+        参考になるドキュメントやリンク、備忘録など自由に記述してください
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 📌 確認事項
+      description: Issue作成前の確認
+      options:
+        - label: 既存のIssueと重複していないことを確認した
+          required: false
+        - label: 必要な情報を記入した
+          required: false
