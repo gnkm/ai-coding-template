@@ -1,0 +1,8 @@
+pre-commit:
+  parallel: true
+  commands:
+    security-misc:
+      run: gitleaks protect --verbose --staged
+    osv-scanner:
+      tags: security
+      run: osv-scanner -r .
