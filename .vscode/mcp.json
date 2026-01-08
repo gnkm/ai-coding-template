@@ -1,7 +1,21 @@
 {
     "servers": {
+        "chrome-devtools": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "chrome-devtools-mcp@latest"
+            ]
+        },
         "context7": {
-            "url": "https://mcp.context7.com/mcp",
+            "url": "https://mcp.context7.com/mcp"
+        },
+        "shadcn": {
+            "command": "npx",
+            "args": [
+                "shadcn@latest",
+                "mcp"
+            ]
         }
     }
 }
