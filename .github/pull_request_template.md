@@ -15,8 +15,8 @@
 ## テスト (Test)
 <!-- 実施したテストの内容を記述してください -->
 - [ ] 手動テスト (Manual Test)
-- [ ] ユニットテスト (Unit Test) `pnpm test`
-- [ ] リンター/フォーマッター確認 (Lint/Format) `pnpm check`
+- [ ] ユニットテスト (Unit Test)
+- [ ] リンター/フォーマッター確認 (Lint/Format)
 
 ## チェックリスト (Checklist)
 <!-- レビューを依頼する前に確認してください -->
