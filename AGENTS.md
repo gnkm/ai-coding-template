@@ -28,3 +28,7 @@
 *   **ブランチ戦略**: `feature/`, `fix/`, `docs/`, `refactor/` などのプレフィックスを使用。
 *   **コミットメッセージ**: [Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/) に従う（例: `feat: add vim mode navigation`）。
 *   **Lefthook**: コミット時に自動チェックが走るため、Lint エラー等は事前に解消すること。
+
+## Skills の利用
+
+Agent Skills の利用にあたり、Python プログラムを実行する際は必ず `uv run --with` コマンドを使用してください。
