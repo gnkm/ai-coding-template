@@ -28,5 +28,3 @@
 *   **ブランチ戦略**: `feature/`, `fix/`, `docs/`, `refactor/` などのプレフィックスを使用。
 *   **コミットメッセージ**: [Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/) に従う（例: `feat: add vim mode navigation`）。
 *   **Lefthook**: コミット時に自動チェックが走るため、Lint エラー等は事前に解消すること。
-
-### 3. 技術的制約・方針
